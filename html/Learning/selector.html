@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            background-color: black;
+        }
+        h1{
+            font-weight: bolder;
+        }
+        .fontsize{
+            font-size: 30px;
+        }
+        .textcolor{
+            color: rgb(21, 230, 14);
+        }
+        .textcolor.fontsize{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        #unique1{
+            color: blue;
+        }
+        #unique2{
+            color: gold;
+        }
+        #unique3{
+            color: rgb(2, 150, 118);
+        }
+        p, h1, h3{
+            color: blue;
+        }
+        div p span{
+            color: rgb(238, 0, 255);
+        }
+        div>span>p{
+            color: aquamarine;
+        }
+
+
+        /* Attribute */
+
+        
+        a[href="https://google.com"]{
+            color:green;
+        }
+        a[href="https://facebook.com"]{
+            color:blue;
+        }
+        a[href="https://netflix.com"]{
+            color:red;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Class Selector</h1>
+    <p class="textcolor fontsize">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
+        doloremque ullam, cum, fugit eum doloribus unde dolores velit dolorum
+        earum necessitatibus officiis ad optio, cumque dolorem delectus corporis 
+        sunt officia quis labore natus possimus deleniti? Aliquid dolores molestias 
+        reprehenderit modi.
+    </p>
+    <p class="fontsize">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
+        doloremque ullam, cum, fugit eum doloribus unde dolores velit dolorum
+        earum necessitatibus officiis ad optio, cumque dolorem delectus corporis 
+        sunt officia quis labore natus possimus deleniti? Aliquid dolores molestias 
+        reprehenderit modi.
+    </p>
+    <p class="textcolor">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
+        doloremque ullam, cum, fugit eum doloribus unde dolores velit dolorum
+        earum necessitatibus officiis ad optio, cumque dolorem delectus corporis 
+        sunt officia quis labore natus possimus deleniti? Aliquid dolores molestias 
+        reprehenderit modi.
+    </p>
+
+
+    <!-- id Selector  -->
+    <h1>id Selector</h1>
+    <p id="unique1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
+        doloremque ullam, cum, fugit eum doloribus unde dolores velit dolorum
+        earum necessitatibus officiis ad optio, cumque dolorem delectus corporis 
+        sunt officia quis labore natus possimus deleniti? Aliquid dolores molestias 
+        reprehenderit modi.
+    </p>
+    <p id="unique2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
+        doloremque ullam, cum, fugit eum doloribus unde dolores velit dolorum
+        earum necessitatibus officiis ad optio, cumque dolorem delectus corporis 
+        sunt officia quis labore natus possimus deleniti? Aliquid dolores molestias 
+        reprehenderit modi.
+    </p>
+    <p id="unique3">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
+        doloremque ullam, cum, fugit eum doloribus unde dolores velit dolorum
+        earum necessitatibus officiis ad optio, cumque dolorem delectus corporis 
+        sunt officia quis labore natus possimus deleniti? Aliquid dolores molestias 
+        reprehenderit modi.
+    </p>
+    <!-- Grouping selector  -->
+    <h1>Grouping Selector</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+         Maiores voluptates praesentium accusamus, iure eligendi,
+          voluptatem magnam officiis exercitationem laborum 
+          molestias quibusdam ipsam quos aut perferendis corrupti itaque quod?
+           Deleniti laborum ipsam aut. Atque ab culpa quidem quisquam
+            accusamus minus ipsum saepe, qui reiciendis dolores?
+             Deleniti, amet. Quos mollitia corrupti nam 
+             ea! Possimus voluptatibus at cum deserunt 
+             impedit reiciendis incidunt ea similique 
+             pariatur totam, quo culpa repudiandae 
+             quasi accusantium? Sapiente, laboriosam! Vel nostrum incidunt illo 
+             blanditiis doloremque inventore alias est. Sint quasi sit, illum, 
+             facilis sapiente itaque laborum aliquid enim temporibus excepturi 
+             eum aspernatur soluta dolor minima? Illo laudantium odit animi 
+             repellendus incidunt unde. Quae eaque enim aliquam vero laboriosam, 
+             perspiciatis voluptatibus labore modi qui nulla deleniti harum 
+             eligendi ea distinctio in! Facere doloremque error est? 
+             Unde illum aliquid nulla reiciendis magnam beatae culpa 
+             recusandae nesciunt sapiente corporis! Earum, quibusdam? 
+             Dignissimos, maxime quod. Sapiente recusandae, distinctio 
+             fugiat possimus aliquam delectus explicabo.
+    </p>
+<h3>there is a h3 tag</h3>
+<!-- combinator Selector -->
+    <!-- disendent Selector -->
+     <div>
+        <p>
+            <span> I am the Direct Chield</span>
+        </p>
+     </div>
+
+     <div>
+        <span>
+            <p>
+                i am an indirect Chield
+            </p>
+        </span>
+     </div>
+     <a href="https://google.com">Google</a>
+     <a href="https://facebook.com">Facebook</a>
+     <a href="https://netflix.com">Netflix</a>
+
+</body>
+</html>

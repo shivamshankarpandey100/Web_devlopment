@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .html{
+            font-size: 16px;
+        }
+        .box{
+            background-color: aqua;
+            margin:10px ;
+        }
+        .px{
+            width: 200px;
+        }
+        .vw{
+            width:10vw ;
+        }
+        .em{
+            width: 10em;
+        }
+        .rem{
+            width: 10em;
+        }
+        .parent{
+            font-size: 35px;
+        }
+        .ems li{
+            font-size: 1.5em;
+        }
+        .rems li{
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="box px">i am 200 px wide</div>
+        <div class="box vw">i am 10 vw wide</div>
+        <div class="parent">
+            <div class="box em">Lorem ipsum dolor sit amet consectetur 
+                adipisicing elit. Molestiae, debitis. Cumque nam quod, 
+                neque iste vero tempora quas unde atque alias placeat 
+                commodi exercitationem illo explicabo doloribus fuga 
+                nisi dicta?
+            </div>
+        </div>
+        <div class="box rem">i am 10 rem wide</div>
+        
+    </div>
+    <ul class="rems">
+        <li>One</li>
+        <li>Two</li>
+        <li>Three
+            <ul>
+                <li>Three a</li>
+                <li>Three b
+                    <ul>
+                        <li>Three b a</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <ul class="ems">
+        <li>One</li>
+        <li>Two</li>
+        <li>Three
+            <ul>
+                <li>Three a</li>
+                <li>Three b
+                    <ul>
+                        <li>Three b a</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>
