@@ -1,9 +1,12 @@
 li{
     list-style: none;
+    margin-left:2rem ;
 }
 img[src="images/lap.jpeg"]{    
-    height: 800px;
-    width: 1400px;
+    height: 100vh;
+    width: 95vw;
+    margin-left:2.5rem ;
+    margin-right:2.5rem;
 }
 .footer{
     height: 80px;
@@ -13,9 +16,9 @@ img[src="images/lap.jpeg"]{
     text-align: center;
     
 }
-.footer p{
-    font-size: 25px;
-    display: inline-flex;
+.footer{
+    text-align: center;
+    
     
 }
 .navbar{
@@ -33,16 +36,25 @@ ul{
     text-align: center;
     margin: 20px;
     padding: 15px;
+    margin-left: 2.5rem;
 }
 .container div{
     background-color:#d8dada;
     margin: 15px;
     padding: 40px;
 }
-.navbar ul li{
+
+/* .navbar ul li{
     margin: 5px;
     padding: 10px;
     margin-left: 50px;
     font-size: 20px;
     font-weight: 100;
+} */
+
+h1{
+    margin-left:2.5rem;
 }
+
+
+
