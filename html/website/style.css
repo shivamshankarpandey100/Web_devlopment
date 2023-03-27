@@ -1,6 +1,11 @@
 li{
     list-style: none;
     margin-left:2rem ;
+
+}
+.navbar>ul>a>li{
+    padding-top: 9px;
+    /* color: black; */
 }
 img[src="images/lap.jpeg"]{    
     height: 100vh;
@@ -54,7 +59,15 @@ ul{
 
 h1{
     margin-left:2.5rem;
+    /* font-weight: ; */
 }
-
-
+a{
+    text-decoration: none;
+}
+a:link a:visited{
+    color: black;
+}
+a:hover{
+    color:red;
+}
 
