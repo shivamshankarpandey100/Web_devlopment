@@ -19,5 +19,8 @@ console.log(a);
 var b="hi i hope  you gyse are able to grasp the concept";
 console.log(b);
 
-var b='hi i hope you gyse are able to grasp the concept';
+var b=`hi i hope you gyse are 
+able to grasp the concept`;
 console.log(b);
+var num=100;
+console.log(`the ${num} is double of ${num/2}`);
