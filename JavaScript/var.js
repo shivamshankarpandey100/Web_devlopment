@@ -22,5 +22,5 @@ console.log(b);
 var b=`hi i hope you gyse are 
 able to grasp the concept`;
 console.log(b);
-var num=100;
+var num=1000000;
 console.log(`the ${num} is double of ${num/2}`);
