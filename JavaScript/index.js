@@ -15,4 +15,4 @@ console.log(typeof a);
 
 //objective
 a=null;
-console.log(typeof a);
+console.log(typeof a);//
