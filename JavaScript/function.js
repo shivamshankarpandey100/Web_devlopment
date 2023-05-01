@@ -21,3 +21,12 @@ else if(str=="sub"){
 }
 let i=calculator("sub",5,3);
 i();
+// for invoking the function and call the function which stored in the variable use "()" 
+let sayHi=function(){
+    console.log("hello gyse iam the function Exprssion");
+}
+
+sayHi();
+
+
+
