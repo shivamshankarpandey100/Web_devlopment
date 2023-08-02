@@ -14,4 +14,4 @@ console.log(str.slice(6,str.length-1));
 console.log(str.slice(6));
 console.log(str.slice(0));
 console.log(str.slice(6,11));
-console.log(str.slice(6,-4));
+console.log(str.slice(0,-4));
