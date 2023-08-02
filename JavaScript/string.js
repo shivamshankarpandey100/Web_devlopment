@@ -36,3 +36,9 @@ let firstStr="hey ";
 let secondStr="how are you";
 let concatenatedStr=firstStr+secondStr;
 console.log(concatenatedStr);
+
+//trim method 
+//trim method removed white spaces 
+let trimstr="     hello world       ";
+console.log(trimstr.trim());
+
