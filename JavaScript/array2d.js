@@ -5,5 +5,5 @@ let array2d=[
 ];
 console.log(array2d);
 console.table(array2d);
-console.table(array2d.length);
-console.table(array2d[0].length);
+console.table(array2d.length);//gives the colum length
+console.table(array2d[0].length);//gives the row length
