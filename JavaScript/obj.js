@@ -31,7 +31,7 @@ let captionAmerica={
 };
 console.log(captionAmerica);
 console.log(captionAmerica.friends)
-console.log(captionAmerica.sayHi());//method accessing
+captionAmerica.sayHi();//method accessing
 
 //method besicaly a function in the object;
 
