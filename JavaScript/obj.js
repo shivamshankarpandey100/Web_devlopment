@@ -2,6 +2,7 @@ let obj={};
 console.log(obj);
 console.log(typeof obj);
 let person={
+    //key has property  and notation
     name:"Shivam",
     age:22,
     phone:1234567890,
@@ -15,7 +16,7 @@ console.log(person["gender"]);//it is a way to use key
 console.log(person.height);
 
 console.log(`hello usre your name is ${person.name} and you are a ${person.gender} and you height is ${person.height}`);
-//nestin of object
+//nested of object
 let captionAmerica={
     firstName:"steve",
     lastname:"rogers",
@@ -39,7 +40,7 @@ captionAmerica.sayHi();//method accessing
 //in keyword in js is used to get keys from that object
 for(let key in captionAmerica){
     console.log(key);
-    console.log(captionAmerica.key);
+    console.log(captionAmerica[key]);
 }
 
 
