@@ -35,6 +35,11 @@ captionAmerica.sayHi();//method accessing
 
 //method besicaly a function in the object;
 
-
+//for loop in object 
+//in keyword in js is used to get keys from that object
+for(let key in captionAmerica){
+    console.log(key);
+    console.log(captionAmerica.key);
+}
 
 
