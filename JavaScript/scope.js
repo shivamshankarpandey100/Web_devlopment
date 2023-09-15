@@ -7,3 +7,4 @@ function outer(){
 var b=10;
 outer();
 console.log(b);
+//lexical scope------------------lexical envoirment chening
