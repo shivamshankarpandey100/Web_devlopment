@@ -68,7 +68,7 @@ const person={
         name:"mara",
         breed:"Dutch tulip hound"
     },
-    getFullName(){
+    getFullName:function getFullName(){
         return `${this.firstName} ${this.lastName}`;
     },
 };
