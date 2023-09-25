@@ -29,3 +29,20 @@ fruit.slice(0,1);
 fruit.splice(0,1);
 fruit.unshift("🍇");
 console.log(fruit);
+
+console.log("-------------------------------------------------------------");
+let count = 0;
+const nums=[0,1,2,3];
+
+// const nums={
+//     0:0,
+//     1:1,
+//     2:2,
+//     3:3
+// }
+for(var i in nums){
+    if(i){
+        count+=1;
+    } 
+}
+console.log(count);
