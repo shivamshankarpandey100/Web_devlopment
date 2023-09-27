@@ -76,4 +76,9 @@ console.log(person.pet?.name);
 console.log(person.pet?.family?.name);
 console.log(person.getFullName?.());
 console.log(person.getLastName?.());
+//these are the answer
+// mara
+// undefined
+// Lydia Hallie
+// undefined
 
