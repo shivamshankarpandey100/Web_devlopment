@@ -12,6 +12,8 @@
 //var is function scoped
 
 var a=100;
+let b=10;
+const c=50;
 
 {
     var a=10;
@@ -27,4 +29,4 @@ var a=100;
 }
 console.log(a);
 console.log(b);//its gives the refrence error
-
+console.log(c);
