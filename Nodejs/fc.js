@@ -12,3 +12,4 @@ let data=fs.readFileSync("f1.txt","utf-8");
 console.log(data);
 
 //node use to rede data delete data ,append data theme
+//fs:- it is has the every type of function 
