@@ -14,3 +14,4 @@ console.log(fs);
 
 //node use to rede data delete data ,append data theme
 //fs:- it is has the every type of function 
+// modeule.export=obj;//which is use to export the data of program or file 
