@@ -40,6 +40,7 @@ for(let i=0;i<filesArr.length;i++){
 console.log(content);
 
 let contentArr=content.split("\n");
+console.log(contentArr);
 
 
 
