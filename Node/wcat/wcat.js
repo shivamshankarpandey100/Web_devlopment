@@ -35,12 +35,25 @@ for(let i=0;i<filesArr.length;i++){
 let content="";
 for(let i=0;i<filesArr.length;i++){
     let fileContent=fs.readFileSync(filesArr[i]);
-    content+=fileContent+"\n";
+    content+=fileContent+"\r\n";
 }
 console.log(content);
 
-let contentArr=content.split("\n");
-console.log(contentArr);
+let contentArr=content.split("\r\n");
+console.table(contentArr);
 
 
+//check if -s is present or not
+let isSPresent=optionsArr.includes("-s");
+if(isSPresent){
+    for(let i=1;i<contentArr.length;i++){
+        if (contentArr[i] == "" && contentArr[i - 1] == "") {
+            contentArr[i] = null;
+        }
+    }
+}
+else{
+    console.log("-s is not present");
+}
 
+console.table(contentArr);
