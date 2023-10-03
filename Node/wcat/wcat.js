@@ -50,10 +50,20 @@ if(isSPresent){
         if (contentArr[i] == "" && contentArr[i - 1] == "") {
             contentArr[i] = null;
         }
+        else if(contentArr[i]=="" && contentArr[i-1]==null){
+            contentArr[i]=null;
+        }
     }
+    let temArr=[];
+    for(let i=0;i<contentArr.length;i++){
+        if(contentArr[i]!==null){
+            temArr.push(contentArr[i]);
+        }
+    }
+    console.log("Data After removing Extera Line \n"+temArr);
 }
 else{
     console.log("-s is not present");
 }
 
-console.table(contentArr);
+// console.table(contentArr);
