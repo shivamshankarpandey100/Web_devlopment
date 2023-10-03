@@ -62,8 +62,44 @@ if(isSPresent){
     }
     console.log("Data After removing Extera Line \n"+temArr);
 }
+
+let indexOfN=optionsArr.indexOf("-n");
+let indexOfB=optionsArr.indexOf("-b");
+//if -n or -b not found ,-1 is returned
+let finalOption="";
+//If both -b and -n is present
+if(indexOfN!=-1 && indexOfB!=-1){
+
+    if(indexOfN < indexOfB){
+        finalOption="-n";
+    }
+    else{
+        finalOption="-b";
+    }
+}
+//either -n is present or -b is present
 else{
-    console.log("-s is not present");
+    if(indexOfN!=-1){
+        finalOption="-n";
+    }
+    else if(indexOfB!=-1){
+        finalOption="-b"; 
+    }
 }
 
-// console.table(contentArr);
+//calling of function by evaluating finalOptions
+
+if(finalOption=="-n"){
+    modifiContentByN();
+}
+else if(finalOption=="-b"){
+    modifiContentByB();
+}
+
+function modifiContentByN(){
+
+}
+
+function modifiContentByB(){
+    
+}
