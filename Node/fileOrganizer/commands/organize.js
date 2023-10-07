@@ -63,6 +63,7 @@ function getFolderName(ext){
             }
         }
     }
+    return "miscellaneous"
 }
 
 function copyFileToDest(srcPath, fullPathofFile, folderName){
@@ -75,26 +76,16 @@ if(!fs.existsSync(destFolderPath)){
 //3
 let fileName=path.basename(fullPathofFile);//Return the last portion of a path.
 let destFileName=path.join(destFolderPath, fileName);
-fs.copyFileSync(fullPathofFile, destFileName)
+fs.copyFileSync(fullPathofFile, destFileName);
 }
 
 
-let srcPath = "E:/Dev-MERN/Web_devlopment Codes/Node/fileOrganizer/downloads";
-organize(srcPath);
+// let srcPath = "E:/Dev-MERN/Web_devlopment/Node/fileOrganizer/downloads";
+// organize(srcPath);
 
 
-
-
-
-
-
-
-
-
-
-
-// module.export={
-//     organize:organize
-// }
+module.exports={
+    organize:organize
+}
 
 

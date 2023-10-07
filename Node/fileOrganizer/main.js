@@ -1,7 +1,9 @@
 //entry point of my command line
-
-let helpFun=require("./commands/help");
+let orgFunc=require("./commands/organize");
+let helpFunc=require("./commands/help");
 //console.log(helpFun.help());
+// let srcPath = "E:/Dev-MERN/Web_devlopment/Node/fileOrganizer/downloads";
+
 let inputArr=process.argv.slice(2);
 let command=inputArr[0];
 let path=inputArr[1];
@@ -12,11 +14,12 @@ switch(command){
         break;
     case "organize":
         //call organize function
-        console.log("organize function executed"+path);
+        orgFunc.organize(path);
+        // console.log("organize function executed"+ " "+path);
         break;
     case "help":
         //call help function
-        helpFun.help();
+        helpFunc.help();
        // console.log("help function executed");
         break;
     default:
