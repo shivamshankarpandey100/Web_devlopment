@@ -37,28 +37,28 @@
 // let x=100;
 // console.log(x);
 
-for(var i=1;i<=10;i++){
-    function outer(a){
-    setTimeout(function(){
-        console.log(a);
-    },2000*a);
-}
-    outer(i);
-    }
+// for(var i=1;i<=10;i++){
+//     function outer(a){
+//     setTimeout(function(){
+//         console.log(a);
+//     },2000*a);
+// }
+//     outer(i);
+//     }
 
 
 
 
-    function a(){
-        let x=100;
-        function y(){
-            return x;
-        }
-        return y;
-    }
-    let fn=a();
-    let ans=fn();
-    console.log(ans);
+    // function a(){
+    //     let x=100;
+    //     function y(){
+    //         return x;
+    //     }
+    //     return y;
+    // }
+    // let fn=a();
+    // let ans=fn();
+    // console.log(ans);
 
     // let i=1;
     // while(i<10){
@@ -78,3 +78,18 @@ for(var i=1;i<=10;i++){
 //         console.log(i);
 //     }
 // },2000);
+
+// var b=1000;
+
+console.log("before");
+setTimeout(function(){
+    console.log("time over");
+},5000);
+fetch('https://jsonplaceholder.typicode.com/todos/1')
+      .then(function(responce){
+        return responce.json();
+      })
+      .then(function(json){
+        console.log(json);
+      });
+console.log("after");
