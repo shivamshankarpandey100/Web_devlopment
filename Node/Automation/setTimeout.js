@@ -8,3 +8,5 @@ console.log(a);
 }
 
 yolo();
+let b=100;
+console.log(b);
