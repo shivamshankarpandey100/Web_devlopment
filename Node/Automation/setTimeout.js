@@ -1,38 +1,44 @@
-{function yolo(){
-    var a=10;
-   function cb(){
-    console.log("how Are you");
-}
-setTimeout(cb,5000);
-console.log(a);
-}
+// {function yolo(){
+//     var a=10;
+//    function cb(){
+//     console.log("how Are you");
+// }
+// setTimeout(cb,5000);
+// console.log(a);
+// }
 
-yolo();
-let b=100;
-console.log(b);
-}
+// yolo();
+// let b=100;
+// console.log(b);
+// }
 
 
 
-const request=require("request");
+// const request=require("request");
 
-let url="https://www.youtube.com";
-function yolo(){
-    var a=10;
-   function cb(){
-    if(err){
-        console.log(err);
+// let url="https://www.youtube.com";
+// function yolo(){
+//     var a=10;
+//    function cb(){
+//     if(err){
+//         console.log(err);
     
-    }
-    else{
-        console.log("how Are you");
-    }
+//     }
+//     else{
+//         console.log("how Are you");
+//     }
     
-}
-request(url,cb);
-console.log(a);
-}
+// }
+// request(url,cb);
+// console.log(a);
+// }
 
-yolo();
-let x=100;
-console.log(x);
+// yolo();
+// let x=100;
+// console.log(x);
+
+for(let i=1;i<=10;i++){
+    setTimeout(function(){
+        console.log(i);
+    },2000*i);
+    }
