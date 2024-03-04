@@ -37,8 +37,44 @@
 // let x=100;
 // console.log(x);
 
-for(let i=1;i<=10;i++){
+for(var i=1;i<=10;i++){
+    function outer(a){
     setTimeout(function(){
-        console.log(i);
-    },2000*i);
+        console.log(a);
+    },2000*a);
+}
+    outer(i);
     }
+
+
+
+
+    function a(){
+        let x=100;
+        function y(){
+            return x;
+        }
+        return y;
+    }
+    let fn=a();
+    let ans=fn();
+    console.log(ans);
+
+    // let i=1;
+    // while(i<10){
+
+    // }
+//it is working because of the scope of the variable i
+    // for(var i=1;i<=10;i++){
+    //     let a=i;
+    //     setTimeout(function(){
+    //         console.log(a);
+    //     },2000*i);
+    // }
+
+//it is not working because of the scope of the variable i
+// setTimeout(function(){
+//     for(var i=1;i<=10;i++){
+//         console.log(i);
+//     }
+// },2000);
