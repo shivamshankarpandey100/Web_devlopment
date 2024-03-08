@@ -93,4 +93,4 @@ function fp() {
   } finally {
     console.log("i am always executed");
     console.log("ditto :)");
-  }
+  }             
