@@ -1,0 +1,13 @@
+<------------------------- DOM ------------------------->
+============== ( Document Object Model ) ================
+
+    The Document Object Model (DOM) is the data representation of 
+the objects that comprise the structure and content of a document
+on the web. This guide will introduce the DOM, look at how the 
+DOM represents an HTML document in memory and how to use APIs 
+to create web content and applications.
+
+DOM is a part of Browser API.
+It is used to manipulate our webpage(Style, structure , content)
+
+DOM is a important part of JS
