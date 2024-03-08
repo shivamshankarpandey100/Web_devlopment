@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>7</li>
+    <li>8</li>
+    <li>9</li>
+    <li>10</li>
+    </ul>
+    
+
+    <script>
+        
+        //2tasks
+        //1->Get All Li Element
+        let unorderlist=document.querySelector("ul");
+        let allLiElement=document.querySelectorAll("li");
+        //step2-> create li element
+        let sevenliElement=document.createElement("li");
+        sevenliElement.innerText="6";
+        //step3-> insert before 7th Li element
+        let element8=allLiElement[5];
+        //what is insert before which element to insert
+        unorderlist.insertBefore(sevenliElement,element8);
+
+
+
+    </script>
+</body>
+</html>
