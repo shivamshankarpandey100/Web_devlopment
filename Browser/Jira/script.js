@@ -5,10 +5,11 @@ let addModal=false;
 addBtn.addEventListener('click',function(){
     if(!addModal){
     modalCont.style.display="flex";
-    addModal=!addModal;
+    
     }
     else{
         modalCont.style.display="none";
-        addModal=!addModal;
+        
     }
+    addModal=!addModal;
 })
