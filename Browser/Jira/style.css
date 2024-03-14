@@ -94,3 +94,6 @@ textarea{
     height:10%;
     width: 38%;
 }
+.main-cont{
+    display: flex;
+}
