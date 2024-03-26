@@ -106,7 +106,7 @@ textarea{
 }
 .ticket-color{
     height:1rem;
-    background-color: black;
+    /* background-color: black; */
 }
 .ticket-id{
     height: 2rem;
