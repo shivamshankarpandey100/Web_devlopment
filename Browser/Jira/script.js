@@ -5,6 +5,8 @@ let modalPriorityColor=colors[colors.length-1];//black
 const allPriorityColors = document.querySelectorAll(".priority-color");
 let textAreaCont = document.querySelector(".textarea-cont");
 
+const mainCont=document.querySelector(".main-cont");
+
 let isModalpresent=false;
 addBtn.addEventListener('click',function(){
     if(!isModalpresent){
@@ -37,7 +39,7 @@ modalCont.addEventListener("keydown",function(e){
         // console.log(textAreaCont.value);
         createTicket(modalPriorityColor,textAreaCont.value);
 
-        modalCont.contains.style.display="none";
+        modalCont.style.display="none";
         isModalpresent=false;
     }
 });
@@ -48,6 +50,10 @@ function createTicket(ticketColor, data){
     ticketCont.innerHTML=` 
     <div class="ticket-color ${ticketColor}"></div>
     <div class="ticket-id"></div>
-    <div class="task-area"></div>
+    <div class="task-area">${data}</div>
     `;
+
+
+    mainCont.appendChild(ticketCont);
+    
 }
