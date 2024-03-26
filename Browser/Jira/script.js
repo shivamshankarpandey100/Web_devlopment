@@ -33,8 +33,8 @@ allPriorityColors.forEach(function(colorElement){
 modalCont.addEventListener("keydown",function(e){
     let key=e.key;
     if(key=="Shift"){
-        console.log(modalPriorityColor);
-        console.log(textAreaCont.value);
+        // console.log(modalPriorityColor);
+        // console.log(textAreaCont.value);
         createTicket(modalPriorityColor,textAreaCont.value);
 
         modalCont.contains.style.display="none";
@@ -43,5 +43,11 @@ modalCont.addEventListener("keydown",function(e){
 });
 
 function createTicket(ticketColor, data){
-    
+    let ticketCont=document.createElement("div");//<div></div>
+    ticketCont.setAttribute("class","ticket-cont");
+    ticketCont.innerHTML=` 
+    <div class="ticket-color ${ticketColor}"></div>
+    <div class="ticket-id"></div>
+    <div class="task-area"></div>
+    `;
 }
