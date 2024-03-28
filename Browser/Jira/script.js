@@ -41,6 +41,11 @@ modalCont.addEventListener("keydown",function(e){
 
         modalCont.style.display="none";
         isModalpresent=false;
+        textAreaCont.value="";
+        allPriorityColors.forEach(function(colorElem){
+            colorElem.classListy.remove("active")
+        })
+        
     }
 });
 
