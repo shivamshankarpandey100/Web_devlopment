@@ -1,11 +1,12 @@
+var uid = new ShortUniqueId();
 const addBtn=document.querySelector(".add-btn");
 const modalCont=document.querySelector(".modal-cont");
 let colors=["lightpink","lightgreen","lightblue","black"];
 let modalPriorityColor=colors[colors.length-1];//black
 const allPriorityColors = document.querySelectorAll(".priority-color");
 let textAreaCont = document.querySelector(".textarea-cont");
-
 const mainCont=document.querySelector(".main-cont");
+let ticketArr=[];
 
 let isModalpresent=false;
 addBtn.addEventListener('click',function(){
@@ -49,16 +50,25 @@ modalCont.addEventListener("keydown",function(e){
     }
 });
 
-function createTicket(ticketColor, data){
+function createTicket(ticketColor,ticketId, data ){
+    let id=ticketId || uid();
     let ticketCont=document.createElement("div");//<div></div>
     ticketCont.setAttribute("class","ticket-cont");
     ticketCont.innerHTML=` 
     <div class="ticket-color ${ticketColor}"></div>
-    <div class="ticket-id"></div>
+    <div class="ticket-id">${id}</div>
     <div class="task-area">${data}</div>
     `;
 
 
     mainCont.appendChild(ticketCont);
+
+    ticketArr.push
     
 }
+
+
+
+
+
+
