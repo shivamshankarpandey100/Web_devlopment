@@ -6,7 +6,7 @@ let modalPriorityColor=colors[colors.length-1];//black
 const allPriorityColors = document.querySelectorAll(".priority-color");
 let textAreaCont = document.querySelector(".textarea-cont");
 const mainCont=document.querySelector(".main-cont");
-let ticketArr=[];
+let ticketsArr=[];
 
 let isModalpresent=false;
 addBtn.addEventListener('click',function(){
@@ -44,8 +44,8 @@ modalCont.addEventListener("keydown",function(e){
         isModalpresent=false;
         textAreaCont.value="";
         allPriorityColors.forEach(function(colorElem){
-            colorElem.classListy.remove("active")
-        })
+            colorElem.classList.remove("active");
+        });
         
     }
 });
@@ -57,16 +57,32 @@ function createTicket(ticketColor,ticketId, data ){
     ticketCont.innerHTML=` 
     <div class="ticket-color ${ticketColor}"></div>
     <div class="ticket-id">${id}</div>
-    <div class="task-area">${data}</div>
+    <div class="text-area">${data}</div>
     `;
 
 
     mainCont.appendChild(ticketCont);
 
-    ticketArr.push
+    //if ticket is being created for the first time, then ticketId would be undefinrd
+    if(!ticketId){
+    ticketsArr.push(
+        {
+            ticketColor,
+            ticketId: id,
+            data
+        }
+    );
+    localStorage.setItem("tickets",JSON.stringify(ticketsArr));
+    }
     
 }
 
+if(localStorage.getItem("tickets")){
+    ticketsArr=JSON.parse(localStorage.getItem("tickets"));
+    ticketsArr.forEach(function(ticketObj){
+        createTicket(ticketObj.ticketColor, ticketObj.ticketId, ticketObj.data);
+    })
+}
 
 
 

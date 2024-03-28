@@ -112,7 +112,7 @@ textarea{
     height: 2rem;
     background-color: red;
 }
-.task-area{
+.text-area{
     height:calc(100% - 1rem - 2rem);
     font-size: 1.5rem;
     outline: none;
