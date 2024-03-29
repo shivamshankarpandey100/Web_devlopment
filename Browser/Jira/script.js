@@ -8,6 +8,7 @@ const allPriorityColors = document.querySelectorAll(".priority-color");
 let textAreaCont = document.querySelector(".textarea-cont");
 const mainCont=document.querySelector(".main-cont");
 let ticketsArr=[];
+let toolboxColors=document.querySelectorAll(".color ");
 
 let isModalpresent=false;
 addBtn.addEventListener('click',function(){
@@ -52,7 +53,7 @@ modalCont.addEventListener("keydown",function(e){
 });
 
 function createTicket(ticketColor, data ,ticketId){
-    let id=ticketId || uid.rnd() ;
+    let id=ticketId || uid.rnd() ;//uid.rnd gives the random tickets Id which length is 10
     let ticketCont=document.createElement("div");//<div></div>
     ticketCont.setAttribute("class","ticket-cont");
     ticketCont.innerHTML=` 
@@ -82,6 +83,31 @@ if(localStorage.getItem("tickets")){
     ticketsArr=JSON.parse(localStorage.getItem("tickets"));
     ticketsArr.forEach(function(ticketObj){
         createTicket(ticketObj.ticketColor, ticketObj.data,ticketObj.ticketId);
+    })
+}
+
+for(let i=0;i<toolboxColors.length;i++){
+    toolboxColors[i].addEventListener("click",function(){
+        let currToolBoxcolor=toolboxColors[i].classList[0];
+
+        let filterdTickets=ticketsArr.filter(function(ticketObj){
+            if(currToolBoxcolor==ticketObj.ticketColor) return ticketObj;
+            // return currToolBoxcolor=ticketObj.ticketColor;
+        });
+
+        let allTickets=document.querySelectorAll(".ticket-cont");
+        for(let i=0;i<allTickets.length;i++){
+            allTickets[i].remove();
+        }
+
+        filterdTickets.forEach(function(ticketObj){
+            createTicket(
+                ticketObj.ticketColor,
+                 ticketObj.data,
+                 ticketObj.ticketId
+                 );
+        })
+
     })
 }
 
