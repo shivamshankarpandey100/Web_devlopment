@@ -109,6 +109,20 @@ for(let i=0;i<toolboxColors.length;i++){
         })
 
     })
+    toolboxColors[i].addEventListener("dblclick",function(){
+        let allTickets=document.querySelectorAll(".ticket-cont");
+        for(let i=0;i<allTickets.length;i++){
+            allTickets[i].remove();
+        }
+        //Display all Tickets
+        ticketsArr.forEach(function(ticketObj){
+            createTicket(
+                ticketObj.ticketColor,
+                 ticketObj.data,
+                 ticketObj.ticketId
+                 );
+        })
+    })
 }
 
 
