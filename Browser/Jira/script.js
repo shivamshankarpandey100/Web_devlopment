@@ -1,4 +1,5 @@
-var uid = new ShortUniqueId();
+// var uid = new ShortUniqueId();
+const uid = new ShortUniqueId({ length: 10 });
 const addBtn=document.querySelector(".add-btn");
 const modalCont=document.querySelector(".modal-cont");
 let colors=["lightpink","lightgreen","lightblue","black"];
@@ -50,14 +51,14 @@ modalCont.addEventListener("keydown",function(e){
     }
 });
 
-function createTicket(ticketColor,ticketId, data ){
-    let id=ticketId || uid();
+function createTicket(ticketColor, data ,ticketId){
+    let id=ticketId || uid.rnd() ;
     let ticketCont=document.createElement("div");//<div></div>
     ticketCont.setAttribute("class","ticket-cont");
     ticketCont.innerHTML=` 
     <div class="ticket-color ${ticketColor}"></div>
     <div class="ticket-id">${id}</div>
-    <div class="text-area">${data}</div>
+    <div class="task-area">${data}</div>
     `;
 
 
@@ -68,8 +69,8 @@ function createTicket(ticketColor,ticketId, data ){
     ticketsArr.push(
         {
             ticketColor,
-            ticketId: id,
-            data
+            data,
+            ticketId: id
         }
     );
     localStorage.setItem("tickets",JSON.stringify(ticketsArr));
@@ -80,7 +81,7 @@ function createTicket(ticketColor,ticketId, data ){
 if(localStorage.getItem("tickets")){
     ticketsArr=JSON.parse(localStorage.getItem("tickets"));
     ticketsArr.forEach(function(ticketObj){
-        createTicket(ticketObj.ticketColor, ticketObj.ticketId, ticketObj.data);
+        createTicket(ticketObj.ticketColor, ticketObj.data,ticketObj.ticketId);
     })
 }
 
