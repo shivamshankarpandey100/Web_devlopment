@@ -103,12 +103,9 @@ textarea{
     height: 12rem;
     width: 15rem;
     background-color: #f1f2f6;
-    margin:14px;
-    padding: 0%;
-    /* display: flex; */
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    margin:20px;
+
+    
 
 }
 .ticket-color{
@@ -138,4 +135,5 @@ textarea{
 
 .main-cont{
     display: flex;
+    flex-wrap: wrap;
 }
