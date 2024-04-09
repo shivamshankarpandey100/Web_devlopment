@@ -66,6 +66,8 @@ function createTicket(ticketColor, data ,ticketId){
 
     mainCont.appendChild(ticketCont);
     handleRemoval(ticketCont, id);
+    handleColor(ticketCont, id);
+    handleLock(ticketCont, id);
 
     //if ticket is being created for the first time, then ticketId would be undefinrd
     if(!ticketId){
@@ -158,7 +160,36 @@ function getTicketIdx(id){
 }
 
 
+// changed priority colors of the tickets
+function handleColor(ticket, id){
+    let ticketColorStrip=ticket.querySelector(".ticket-color");
 
+    ticketColorStrip.addEventListener("click",function(){
+        let currticketColor=ticketColorStrip.classList[1];
+        let currticketColorIdx=colors.indexOf(currticketColor);
+
+           let newTicketColorIdx = currticketColorIdx+1;
+           newTicketColorIdx=newTicketColorIdx%colors.length;
+            let newticketColor=colors[newTicketColorIdx];
+
+            ticketColorStrip.classList.remove(currticketColor);
+            ticketColorStrip.classList.add(newticketColor);
+
+
+
+            //local storage update
+        let ticketIdx=getTicketIdx(id);
+        ticketsArr[ticketIdx].ticketColor=newticketColor;
+        localStorage.setItem("tickets",JSON.stringify(ticketsArr));
+
+        });
+
+}
+
+// lock and unlock handling
+function handleLock(ticket,id){
+
+}
 
 
 
