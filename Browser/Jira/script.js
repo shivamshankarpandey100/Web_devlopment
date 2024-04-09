@@ -41,7 +41,6 @@ modalCont.addEventListener("keydown",function(e){
         console.log(modalPriorityColor);
         console.log(textAreaCont.value);
         createTicket(modalPriorityColor,textAreaCont.value);
-
         modalCont.style.display="none";
         isModalpresent=false;
         textAreaCont.value="";
