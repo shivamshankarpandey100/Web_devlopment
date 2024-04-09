@@ -9,6 +9,8 @@ let textAreaCont = document.querySelector(".textarea-cont");
 const mainCont=document.querySelector(".main-cont");
 let ticketsArr=[];
 let toolboxColors=document.querySelectorAll(".color ");
+let removeBtn=document.querySelector(".remove-btn");
+
 
 let isModalpresent=false;
 addBtn.addEventListener('click',function(){
@@ -52,7 +54,7 @@ modalCont.addEventListener("keydown",function(e){
 });
 
 function createTicket(ticketColor, data ,ticketId){
-    let id=ticketId || uid.rnd() ;//uid.rnd gives the random tickets Id which length is 10
+    let id= ticketId || uid.rnd() ;//uid.rnd gives the random tickets Id which length is 10
     let ticketCont=document.createElement("div");//<div></div>
     ticketCont.setAttribute("class","ticket-cont");
     ticketCont.innerHTML=` 
@@ -63,6 +65,7 @@ function createTicket(ticketColor, data ,ticketId){
 
 
     mainCont.appendChild(ticketCont);
+    handleRemoval(ticketCont, id);
 
     //if ticket is being created for the first time, then ticketId would be undefinrd
     if(!ticketId){
@@ -123,6 +126,38 @@ for(let i=0;i<toolboxColors.length;i++){
         })
     })
 }
+
+//remove clicking actvated or de-activated button Styling
+let removeBtnActive=false;
+removeBtn.addEventListener("click",function(){
+    if(removeBtnActive){
+        removeBtn.style.color="white";
+    }else{
+        removeBtn.style.color="red";
+    }
+    removeBtnActive=!removeBtnActive;
+});
+function handleRemoval(ticket, id){
+    ticket.addEventListener("click",function(){
+        if (!removeBtnActive) return;
+        //local Storage remove
+        let idx=getTicketIdx(id);
+        ticketsArr.splice(idx,1);
+        //remove from browser storage
+        localStorage.setItem("tickets", JSON.stringify(ticketsArr));
+        // remove from frontend
+        ticket.remove();
+});
+}
+
+function getTicketIdx(id){
+   let ticketIdx=ticketsArr.findIndex(function(ticketObj){
+        return ticketObj.ticketId == id;
+   })
+   return ticketIdx;
+}
+
+
 
 
 
